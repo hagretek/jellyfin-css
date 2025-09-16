@@ -1,0 +1,196 @@
+/* TV app specific CSS */
+/* hope it'll detect my keyboard, otherwise i'll have to type in the link with the remote */
+
+:root {
+	--accent: #6279cd;
+	--highlight: #394778;
+}
+
+.textarea-mono {
+	font-family: monospace;
+	font-size: 110%;
+}
+
+.backdropImage {filter: blur(18px);}
+
+
+
+/* Modified https://github.com/jellyfin/jellyfin-web/blob/master/src/themes/purplehaze/theme.scss
+   pink highlights (#ff77f1) and light blue accents (#0ce8d6) swapped to the purples from Ultrachromic */
+/* could use some cleaning up, but atm i don't care that much, just happy everything looks nicer */
+
+.itemSelectionPanel {
+    border: 1px solid var(--accent);
+}
+
+.selectionCommandsPanel {
+    background: var(--accent);
+}
+
+.upNextDialog-countdownText {
+    color: var(--accent);
+}
+
+.progressring-spiner /* [sic] */ {
+    border-color: var(--accent);
+}
+
+.button-flat:hover {
+    color: var(--accent);
+}
+
+.button-link {
+    color: var(--accent);
+}
+
+.guide-channelHeaderCell:focus,
+.programCell:focus {
+    background-color: var(--accent) !important;
+}
+
+.guide-date-tab-button.show-focus:focus {
+    background-color: var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .paper-icon-button-light:hover:not(:disabled) {
+        color: var(--accent);
+        background-color: rgba(98, 121, 205, 0.2); /* --accent, but with transparency */
+    }
+}
+
+.paper-icon-button-light:active:not(:disabled) {
+    color: var(--accent);
+}
+
+#btnResetPassword:hover,
+#btnRestart:hover,
+#btnDeleteImage:hover,
+#btnShutdown:hover,
+.button-cancel:hover,
+.fab:hover,
+.raised:hover,
+.alphaPickerButton:hover,
+.submit:hover,
+.btnBrowse:hover,
+.mini:hover,
+.btnRefresh:hover,
+.viewTabButton:hover,
+.button-alt:hover,
+.btnOption:hover,
+.btnManual:hover,
+.block:hover {
+    background: var(--accent);
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+	border-color: var(--accent);
+}
+
+.emby-checkbox:checked + span + .checkboxOutline > .checkboxIcon-checked {
+    color: var(--accent);
+}
+
+.itemProgressBarForeground {
+    background-color: var(--accent);
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--accent);
+}
+
+.alphaPickerButton-selected {
+    color: var(--accent);
+}
+
+.emby-tab-button:hover {
+    color: var(--accent);
+}
+
+.button-submit {
+	background: var(--accent);
+}
+
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused {
+    color: var(--accent);
+}
+
+.emby-input:focus,
+.emby-textarea:focus {
+    border-color: var(--accent);
+}
+
+.checkboxOutline {
+	border-color: var(--accent);
+}
+
+.emby-button.show-focus:focus {
+	background: var(--accent);
+}
+
+.mdl-slider {
+	color: var(--accent);
+}
+
+
+
+.paper-icon-button-light.show-focus:focus {
+	color: var(--highlight);
+}
+
+.fab:focus,
+.raised:focus {
+    background: var(--highlight);
+}
+
+.button-submit:focus {
+    background: var(--highlight);
+}
+
+.alphaPickerButton-tv:focus {
+    background: var(--highlight);
+}
+
+.emby-select-withcolor:focus {
+    border-color: var(--highlight) !important;
+}
+
+.emby-select-tv-withcolor:focus {
+    background-color: var(--highlight) !important;
+}
+
+.emby-checkbox:focus + span + .checkboxOutline {
+    border-color: var(--highlight);
+}
+
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
+    border: 0.14em solid var(--highlight);
+}
+
+.mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles svg .mdl-radio__outer-circle,
+.mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles svg .mdl-radio__inner-circle {
+    color: var(--highlight);
+}
+
+.emby-tab-button.show-focus:focus {
+    color: var(--highlight);
+}
+
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus {
+    color: var(--highlight);
+}
+
+.card:focus .cardBox.visualCardBox,
+.card:focus .cardBox:not(.visualCardBox) .cardScalable {
+    border-color: var(--highlight) !important;
+}
+
+.button-submit:hover {
+	background: var(--highlight);
+}
