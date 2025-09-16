@@ -1,0 +1,158 @@
+/* Sagittarius A* general custom CSS */
+
+/* Ultrachromic
+   https://github.com/CTalvio/Ultrachromic */
+/* Recommended */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fixes.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/jf_font.css');
+/* Required */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/base.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/accentlist.css');
+/* Rounding */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/rounding_circlehover.css');
+/* Square cast list */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/smallercast.css');
+/* Grid episode list */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/episodelist/episodes_grid.css');
+/* Transparent top bar */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/header/header_transparent.css');
+/* Login screen */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/login/login_minimalistic.css');
+/* Input fields */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fields/fields_noborder.css');
+/* Watched indicators */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/cornerindicator/indicator_corner.css');
+/* Color scheme */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/type/colorful.css');
+/* Title page */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/titlepage/title_simple-logo.css');
+/* Progress bar */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/bottombarprogress.css');
+/* Effects */
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/hoverglow.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/glassy.css');
+
+/*Accent color and rounding */
+:root {--accent: 98, 121, 205;}
+:root {--rounding: 12px;}
+
+/* Background blur */
+.backdropImage {filter: blur(18px) saturate(120%) contrast(120%) brightness(40%);}
+
+/* Square guest cast list fix
+   modified https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/smallercast.css (#castContent -> #guestCastContent) */
+/*Shrink and square (or round) cast thumnails*/
+@media all and (min-width: 131.25em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 6.3vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 120em) and (max-width: 131.25em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 6.4vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 100em) and (max-width: 120em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 7.6vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 87.5em) and (max-width: 100em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 9.3vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 75em) and (max-width: 87.5em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 10.5vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 50em) and (max-width: 75em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 15vw !important;
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 43.75em) and (max-width: 50em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 20.1vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (min-width: 25em) and (max-width: 43.75em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 31.2vw !important; 
+		font-size: 90% !important;
+	}
+}
+@media all and (max-width: 25em){
+	#guestCastContent .card.overflowPortraitCard {
+		width: 40vw !important; 
+		font-size: 90% !important;
+	}
+}
+.cardPadder {
+	background-color: #0000 !important; box-shadow: none !important;
+}
+/*Correct image aspect ratio behaviour, set border-radius to zero for square tiles*/
+@media all and (min-width: 131.25em){
+	#guestCastContent .cardScalable {
+		width: calc(6.3vw - 0.6em) !important; 
+		height: calc(6.3vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 120em) and (max-width: 131.25em){
+	#guestCastContent .cardScalable {
+		width:  calc(6.4vw - 0.6em) !important; 
+		height: calc(6.4vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 100em) and (max-width: 120em){
+	#guestCastContent .cardScalable {
+		width:  calc(7.6vw - 0.6em) !important; 
+		height: calc(7.6vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 87.5em) and (max-width: 100em){
+	#guestCastContent .cardScalable {
+		width:  calc(9.3vw - 0.6em) !important; 
+		height: calc(9.3vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 75em) and (max-width: 87.5em){
+	#guestCastContent .cardScalable {
+		width:  calc(10.5vw - 0.6em) !important; 
+		height: calc(10.5vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 50em) and (max-width: 75em){
+	#guestCastContent .cardScalable {
+		width:  calc(15vw - 0.6em) !important; 
+		height: calc(15vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 43.75em) and (max-width: 50em){
+	#guestCastContent .cardScalable {
+		width:  calc(20.1vw - 0.6em) !important; 
+		height: calc(20.1vw - 0.6em) !important;
+	}
+}
+@media all and (min-width: 25em) and (max-width: 43.75em){
+	#guestCastContent .cardScalable {
+		width:  calc(31.2vw - 0.6em) !important; 
+		height: calc(31.2vw - 0.6em) !important;
+	}
+}
+@media all and (max-width: 25em){
+	#guestCastContent .cardScalable {
+		width:  calc(40vw - 0.6em) !important;
+		height: calc(40vw - 0.6em) !important;
+	}
+}
+
+/* --- */
